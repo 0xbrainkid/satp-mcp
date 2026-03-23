@@ -1,0 +1,45 @@
+{
+  "name": "agentfolio-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for SATP (Solana Agent Trust Protocol) \u2014 query 200+ AI agent trust scores, verifications, and reputation from AgentFolio. Works with Claude Code, Cursor, and Claude Desktop.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "satp-mcp": "src/index.js",
+    "agentfolio-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/test-client.js"
+  },
+  "keywords": [
+    "mcp",
+    "solana",
+    "satp",
+    "trust",
+    "agent",
+    "identity",
+    "reputation",
+    "agentfolio",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "ai-agent"
+  ],
+  "author": "brainAI",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^3.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xbrainkid/satp-mcp"
+  },
+  "homepage": "https://agentfolio.bot",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
+}
