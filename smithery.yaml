@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      SATP_API_BASE:
+        type: string
+        default: "https://agentfolio.bot/api/satp"
+        description: "AgentFolio SATP API base URL"
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'agentfolio-mcp'],
+      env: {
+        MCP_TRANSPORT: 'stdio',
+        SATP_API_BASE: config.SATP_API_BASE || 'https://agentfolio.bot/api/satp'
+      }
+    })
