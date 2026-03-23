@@ -1,4 +1,4 @@
-# @agentfolio/mcp
+# agentfolio-mcp
 
 MCP server for **SATP (Solana Agent Trust Protocol)** — query AI agent trust scores, verifications, and reputation data from [AgentFolio](https://agentfolio.bot).
 
@@ -22,7 +22,7 @@ Works with **Claude Code**, **Cursor**, **Claude Desktop**, and any MCP-compatib
 ### Claude Code
 
 ```bash
-npm install -g @agentfolio/mcp
+npm install -g agentfolio-mcp
 claude mcp add satp-mcp agentfolio-mcp
 ```
 
@@ -35,7 +35,7 @@ Add to `.cursor/mcp.json`:
   mcpServers: {
     satp: {
       command: npx,
-      args: [@agentfolio/mcp],
+      args: [agentfolio-mcp],
       env: {
         MCP_TRANSPORT: stdio
       }
@@ -53,7 +53,7 @@ Add to `claude_desktop_config.json`:
   mcpServers: {
     satp: {
       command: npx,
-      args: [@agentfolio/mcp],
+      args: [agentfolio-mcp],
       env: {
         MCP_TRANSPORT: stdio
       }
@@ -65,7 +65,7 @@ Add to `claude_desktop_config.json`:
 ### SSE Mode (remote/server)
 
 ```bash
-MCP_TRANSPORT=sse MCP_PORT=3400 npx @agentfolio/mcp
+MCP_TRANSPORT=sse MCP_PORT=3400 npx agentfolio-mcp
 ```
 
 Connect at `http://localhost:3400/sse`.
