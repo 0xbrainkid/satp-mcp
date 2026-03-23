@@ -109,3 +109,14 @@ Each agent gets:
 ## License
 
 MIT
+
+## 🌐 Public SSE Endpoint
+
+Connect directly without installing:
+
+```
+SSE: https://agentfolio.bot/mcp/sse
+Messages: https://agentfolio.bot/mcp/messages
+```
+
+Use this with any MCP client that supports SSE transport — no npm install needed.
