@@ -4,6 +4,23 @@ MCP server for **SATP (Solana Agent Trust Protocol)** — query AI agent trust s
 
 Works with **Claude Code**, **Cursor**, **Claude Desktop**, and any MCP-compatible client.
 
+[![npm version](https://img.shields.io/npm/v/agentfolio-mcp)](https://www.npmjs.com/package/agentfolio-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Why?
+
+AI agents are making payments, calling APIs, and interacting with each other. **How do you know which ones to trust?**
+
+KYC verifies humans. KYB verifies businesses. **KYA (Know Your Agent) verifies AI agents.**
+
+agentfolio-mcp gives your AI assistant instant access to the SATP trust registry — 200+ agents, on-chain attestations, and verified identity data.
+
+## Quick Start
+
+```bash
+npx agentfolio-mcp
+```
+
 ## 🔧 Tools
 
 | Tool | Description | Cost |
@@ -32,12 +49,12 @@ Add to `.cursor/mcp.json`:
 
 ```json
 {
-  mcpServers: {
-    satp: {
-      command: npx,
-      args: [agentfolio-mcp],
-      env: {
-        MCP_TRANSPORT: stdio
+  "mcpServers": {
+    "satp": {
+      "command": "npx",
+      "args": ["agentfolio-mcp"],
+      "env": {
+        "MCP_TRANSPORT": "stdio"
       }
     }
   }
@@ -50,12 +67,12 @@ Add to `claude_desktop_config.json`:
 
 ```json
 {
-  mcpServers: {
-    satp: {
-      command: npx,
-      args: [agentfolio-mcp],
-      env: {
-        MCP_TRANSPORT: stdio
+  "mcpServers": {
+    "satp": {
+      "command": "npx",
+      "args": ["agentfolio-mcp"],
+      "env": {
+        "MCP_TRANSPORT": "stdio"
       }
     }
   }
@@ -70,22 +87,24 @@ MCP_TRANSPORT=sse MCP_PORT=3400 npx agentfolio-mcp
 
 Connect at `http://localhost:3400/sse`.
 
-## 📡 API
+## 📡 What is SATP?
 
-The MCP server connects to the AgentFolio SATP API at `https://agentfolio.bot/api/satp`.
+**Solana Agent Trust Protocol** — an on-chain identity and reputation system for AI agents.
 
-Override with: `SATP_API_BASE=http://your-server:3333/api/satp`
-
-## 🏗️ What is SATP?
-
-**Solana Agent Trust Protocol** — an on-chain identity and reputation system for AI agents. Each agent gets:
-
+Each agent gets:
 - **On-chain identity** (PDA-based, Solana mainnet)
-- **Verification levels** (0-5, from registered → sovereign)
+- **Verification levels** (0-5, from Registered → Sovereign)
 - **Reputation scores** (from verifications, attestations, peer reviews)
-- **Cross-platform verifications** (GitHub, X, Solana wallet, ETH, Polymarket, etc.)
+- **Cross-platform verifications** (GitHub, X, Solana wallet, ETH, Polymarket, MCP endpoint, Domain, and more — 14 types total)
 
 200+ agents registered at [agentfolio.bot](https://agentfolio.bot).
+
+## 🔗 Links
+
+- **Website:** [agentfolio.bot](https://agentfolio.bot)
+- **SATP Explorer:** [agentfolio.bot/satp/explorer](https://agentfolio.bot/satp/explorer)
+- **API Docs:** [agentfolio.bot/docs](https://agentfolio.bot/docs)
+- **npm:** [agentfolio-mcp](https://www.npmjs.com/package/agentfolio-mcp)
 
 ## License
 
