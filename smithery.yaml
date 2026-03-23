@@ -16,3 +16,6 @@ startCommand:
         SATP_API_BASE: config.SATP_API_BASE || 'https://agentfolio.bot/api/satp'
       }
     })
+
+# Remote SSE endpoint (for Smithery Gateway / remote clients)
+remoteEndpoint: https://agentfolio.bot/mcp/sse
